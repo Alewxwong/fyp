@@ -436,48 +436,12 @@ If the supplied environment already exists:
 conda env remove -n radio-map-fyp
 conda env create -f environment.yml
 conda activate radio-map-fyp
+python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
 
-The existing environment named `ufno` may also be used if all package checks and tests pass.
+For CPU-only systems, remove `pytorch-cuda=12.1` and the `nvidia` channel, or use `pip install -r requirements.txt` in a clean Python 3.11 environment.
 
-### 9.3 Verify PyTorch and CUDA
-
-```powershell
-python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('CUDA build:', torch.version.cuda); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
-```
-
-Expected result:
-
-```text
-CUDA available: True
-GPU: NVIDIA ...
-```
-
-### 9.4 Verify imports
-
-```powershell
-python -c "import torch,numpy,pandas,PIL,yaml,tqdm; print('Required imports passed')"
-```
-
-### 9.5 Run tests
-
-```powershell
-python -m pytest -q
-```
-
-Expected:
-
-```text
-1 passed
-```
-
----
-
-## 10. Dataset preparation
-
-The following commands are included for reproducibility. They do not need to be rerun if the current manifests and split files already exist.
-
-### 10.1 Inspect the dataset
+## 2. Inspect your existing dataset
 
 ```powershell
 python scripts/inspect_dataset.py --root "C:\Users\user\Desktop\ufno\RadioMapSeer"
