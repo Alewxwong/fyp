@@ -433,9 +433,9 @@ conda activate ufno
 If the supplied environment already exists:
 
 ```powershell
-conda env remove -n radio-map-fyp
+conda env remove -n ufno
 conda env create -f environment.yml
-conda activate radio-map-fyp
+conda activate ufno
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
 
@@ -674,7 +674,7 @@ Stores the exact merged configuration used for the run.
 Open another terminal:
 
 ```powershell
-conda activate radio-map-fyp
+conda activate ufno
 cd "C:\Users\user\Desktop\ufno"
 tensorboard --logdir outputs
 ```
