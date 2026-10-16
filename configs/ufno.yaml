@@ -1,0 +1,8 @@
+base: base.yaml
+model:
+  name: ufno
+  width: 42
+  modes1: 20
+  modes2: 20
+  depth: 4
+  padding: 9

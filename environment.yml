@@ -1,0 +1,21 @@
+name: radio-map-fyp
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch=2.5
+  - torchvision=0.20
+  - pytorch-cuda=12.1
+  - numpy=1.26
+  - pillow=10
+  - pyyaml=6
+  - tqdm=4.66
+  - pandas=2.2
+  - scikit-image=0.24
+  - scipy=1.14
+  - tensorboard=2.18
+  - pip
+  - pip:
+      - fvcore==0.1.5.post20221221

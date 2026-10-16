@@ -1,0 +1,47 @@
+@"
+# RadioMapSeer dataset
+RadioMapSeer/
+
+# Training outputs and checkpoints
+outputs/
+*.pt
+*.pth
+*.ckpt
+runs/
+
+# Generated manifests
+data/manifests/*.csv
+
+# Keep the reproducible city splits
+!data/splits/
+!data/splits/*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+"@ | Set-Content -Encoding UTF8 .gitignore
