@@ -9,7 +9,7 @@ RadioMapSeer releases have different folder names. This project does not guess s
 
 ```bash
 conda env create -f environment.yml
-conda activate radio-map-fyp
+conda activate ufno
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
 
