@@ -427,7 +427,7 @@ Open PowerShell or Anaconda Prompt:
 ```powershell
 cd "C:\Users\user\Desktop\ufno"
 conda env create -f environment.yml
-conda activate radio-map-fyp
+conda activate ufno
 ```
 
 If the supplied environment already exists:
