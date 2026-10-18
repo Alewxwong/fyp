@@ -1,29 +1,29 @@
 seed: 42
 output_dir: outputs
 data:
-  root: "C:/Users/user/Desktop/ufno/RadioMapSeer"
+  root: C:\Users\user\Desktop\ufno\RadioMapSeer
   manifest: data/manifests/irt2.csv
   split_dir: data/splits
   image_size: 256
   input_mode: five
   tx_sigma: 2.0
-  num_workers: 4
+  num_workers: 0
   pin_memory: true
   augment: true
-  # Used to convert PNG [0,255] to dB: dB = min_db + png/255*(max_db-min_db)
   min_db: -127.0
   max_db: -47.0
 training:
-  epochs: 100
-  batch_size: 8
+  epochs: 50
+  batch_size: 4
   lr: 0.001
   weight_decay: 0.0001
   patience: 15
-  amp: true
+  amp: false
   grad_clip: 1.0
   loss: l1
   gradient_weight: 0.0
   scheduler: cosine
+  min_lr: 0.000001
   save_predictions: true
 model:
   name: unet

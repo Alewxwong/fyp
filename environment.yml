@@ -1,4 +1,4 @@
-name: radio-map-fyp
+name: ufno
 channels:
   - pytorch
   - nvidia
@@ -19,3 +19,4 @@ dependencies:
   - pip
   - pip:
       - fvcore==0.1.5.post20221221
+ 
