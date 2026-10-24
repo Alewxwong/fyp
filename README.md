@@ -1,5 +1,5 @@
 # FYP: Fair Comparison of U-Net, RadioUNet, FNO and U-FNO for Radio-Map Prediction
-
+#[The checkpoints](https://drive.google.com/file/d/1moH4S1UDUqKz7lkZjCbBRT0R2L-blw-G/view?usp=sharing)
 ## Project overview
 
 This repository contains two controlled experiments for 2D outdoor radio-map prediction using the RadioMapSeer dataset:
