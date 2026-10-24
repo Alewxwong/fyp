@@ -1,0 +1,5 @@
+base: ../base_flops.yaml
+
+model:
+  name: unet
+  base_width: 28

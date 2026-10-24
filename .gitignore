@@ -2,19 +2,39 @@
 # RadioMapSeer dataset
 RadioMapSeer/
 
-# Training outputs and checkpoints
+# Model outputs
+parameter/outputs/
+parameter/outputs_gradient/
+flops/outputs/
+flops/outputs_flops/
 outputs/
+outputs_flops/
+
+# Checkpoints
 *.pt
 *.pth
 *.ckpt
-runs/
+
+# TensorBoard and experiment logs
+**/tb/
+**/runs/
+**/slurm_logs/
+slurm-*.out
+*.log
 
 # Generated manifests
-data/manifests/*.csv
+parameter/data/manifests/*.csv
+flops/data/manifests/*.csv
 
-# Keep the reproducible city splits
-!data/splits/
-!data/splits/*.txt
+# Keep fixed split files
+!parameter/data/splits/
+!parameter/data/splits/*.txt
+!flops/data/splits/
+!flops/data/splits/*.txt
+
+# Generated FLOP search output
+flops/flop_search_results.csv
+flops/flops_*.txt
 
 # Python
 __pycache__/
@@ -24,17 +44,14 @@ __pycache__/
 build/
 dist/
 
-# Environments
+# Environments and secrets
 .env
 .env.*
 .venv/
 venv/
 env/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# IDE and operating system
+# Editors and operating system
 .vscode/
 .idea/
 .DS_Store
@@ -43,5 +60,5 @@ desktop.ini
 
 # Temporary files
 *.tmp
-*.log
+*.bak
 "@ | Set-Content -Encoding UTF8 .gitignore

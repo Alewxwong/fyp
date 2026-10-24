@@ -24,7 +24,7 @@ def main():
     parser.add_argument("--device", default="auto")
     parser.add_argument(
         "--data-root",
-        default="C:/Users/user/Desktop/ufno/RadioMapSeer",
+        default="C:/Users/user/Desktop/FYP/RadioMapSeer",
     )
     parser.add_argument("--num-workers", type=int, default=0)
     args = parser.parse_args()

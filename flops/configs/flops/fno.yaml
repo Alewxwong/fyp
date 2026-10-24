@@ -1,0 +1,9 @@
+base: ../base_flops.yaml
+
+model:
+  name: fno
+  width: 122
+  modes1: 20
+  modes2: 20
+  depth: 4
+  padding: 9

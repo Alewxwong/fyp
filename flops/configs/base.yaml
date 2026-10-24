@@ -1,17 +1,19 @@
 seed: 42
-output_dir: outputs
+output_dir: outputs_flops
+
 data:
-  root: C:\Users\user\Desktop\ufno\RadioMapSeer
+  root: "C:/Users/user/Desktop/FYP/RadioMapSeer"
   manifest: data/manifests/irt2.csv
   split_dir: data/splits
   image_size: 256
   input_mode: five
   tx_sigma: 2.0
-  num_workers: 0
+  num_workers: 4
   pin_memory: true
   augment: true
   min_db: -127.0
   max_db: -47.0
+
 training:
   epochs: 50
   batch_size: 4
@@ -25,12 +27,13 @@ training:
   scheduler: cosine
   min_lr: 0.000001
   save_predictions: true
+
 model:
   name: unet
   in_channels: 5
   out_channels: 1
-  base_width: 32
-  width: 48
+  base_width: 28
+  width: 43
   modes1: 20
   modes2: 20
   depth: 4

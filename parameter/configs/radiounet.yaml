@@ -1,0 +1,4 @@
+base: base.yaml
+model:
+  name: radiounet
+  base_width: 20
