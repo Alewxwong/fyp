@@ -114,74 +114,6 @@ Verify PyTorch:
 python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
 ```
 
-## Required local path changes
-
-After moving the projects into `C:\Users\user\Desktop\FYP`, update all hard-coded dataset roots.
-
-### Parameter experiment
-
-Edit:
-
-```text
-C:\Users\user\Desktop\FYP\parameter\configs\base.yaml
-```
-
-Set:
-
-```yaml
-data:
-  root: "C:/Users/user/Desktop/FYP/RadioMapSeer"
-```
-
-Also check these files for old dataset paths:
-
-```text
-parameter/scripts/evaluate.py
-parameter/scripts/compare_predictions.py
-```
-
-Their default data root should be:
-
-```text
-C:/Users/user/Desktop/FYP/RadioMapSeer
-```
-
-### FLOP experiment
-
-Edit:
-
-```text
-C:\Users\user\Desktop\FYP\flops\configs\base_flops.yaml
-```
-
-Set:
-
-```yaml
-data:
-  root: "C:/Users/user/Desktop/FYP/RadioMapSeer"
-```
-
-Also check:
-
-```text
-flops/scripts/evaluate.py
-flops/scripts/compare_predictions.py
-```
-
-Their default data root should also be:
-
-```text
-C:/Users/user/Desktop/FYP/RadioMapSeer
-```
-
-Search both projects for stale paths:
-
-```powershell
-Get-ChildItem .\parameter,.\flops -Recurse -File | Select-String -Pattern "C:/Users/user/Desktop/ufno|/data1/ieug23/wth023|RadioMapSeer"
-```
-
-Review every result. Paths in old logs or documentation can remain for provenance, but active configuration and Python defaults must use the new desktop path.
-
 ## Rebuild local manifests
 
 Run from the parameter folder:
@@ -200,9 +132,6 @@ python scripts/build_manifest.py --root "C:/Users/user/Desktop/FYP/RadioMapSeer"
 
 The fixed split files can be copied from `parameter/data/splits/` to `flops/data/splits/`. Rebuild the FLOP manifests from inside `flops/` using the same commands and dataset root.
 
-## Main reporting design
-
-The two experiments must be reported separately:
 
 ### Parameter-matched result
 
